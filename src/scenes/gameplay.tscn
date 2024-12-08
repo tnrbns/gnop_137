@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxvlvqf5xovse"]
+[gd_scene load_steps=7 format=3 uid="uid://dxvlvqf5xovse"]
 
 [ext_resource type="Script" path="res://scenes/Game.gd" id="1_dyyl3"]
 [ext_resource type="PackedScene" uid="uid://dndaf10u8xrnh" path="res://elements/player.tscn" id="1_ymufi"]
@@ -10,6 +10,9 @@ size = Vector2(6.0075, 0.315)
 [sub_resource type="SystemFont" id="SystemFont_src1v"]
 font_names = PackedStringArray("8-bit Arcade In")
 font_stretch = 75
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_usf6v"]
+size = Vector2(5.33378, 0.052176)
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_dyyl3")
@@ -79,6 +82,22 @@ offset_bottom = 92.0
 theme_override_fonts/font = SubResource("SystemFont_src1v")
 theme_override_font_sizes/font_size = 120
 text = "0"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(578, -30)
+scale = Vector2(-447.186, 43.2926)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.00223616, 0.50817)
+rotation = -3.14159
+scale = Vector2(0.503134, -12.8416)
+shape = SubResource("RectangleShape2D_usf6v")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.0245983, 15.453)
+rotation = -3.14159
+scale = Vector2(0.503134, -12.8416)
+shape = SubResource("RectangleShape2D_usf6v")
 
 [connection signal="body_entered" from="Top" to="." method="_on_top_body_entered"]
 [connection signal="body_entered" from="Bottom" to="." method="_on_bottom_body_entered"]
