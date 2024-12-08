@@ -11,10 +11,21 @@ config_version=5
 [application]
 
 config/name="GNOP (GNOP's No Ordinary Pong)"
+run/main_scene="res://scenes/mainScreen.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Main="*res://scripts/main.gd"
+
+[display]
+
+window/size/mode=2
+window/size/resizable=false
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.0687982, 0.0687983, 0.0687982, 1)
