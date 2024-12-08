@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 450.0
 @export var side = 'p1'
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = get_axis(KEY_W,KEY_S)
 	
 	if side =='p1':
@@ -22,7 +22,3 @@ func _physics_process(delta):
 func get_axis(up,down):
 	if Input.is_key_pressed(up): return -1
 	elif Input.is_key_pressed(down): return 1 
-
-func _on_area_2d_body_entered(body):
-	body.direction.x *= -1
-	Main.side = side

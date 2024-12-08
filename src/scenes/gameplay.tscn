@@ -20,7 +20,7 @@ script = ExtResource("1_dyyl3")
 [node name="Top" type="Area2D" parent="."]
 scale = Vector2(200, 200)
 collision_layer = 0
-collision_mask = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
 position = Vector2(2.89, -0.15)
@@ -29,7 +29,7 @@ shape = SubResource("RectangleShape2D_0qtug")
 [node name="Bottom" type="Area2D" parent="."]
 scale = Vector2(200, 200)
 collision_layer = 0
-collision_mask = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
 position = Vector2(2.955, 3.325)
@@ -38,7 +38,7 @@ shape = SubResource("RectangleShape2D_0qtug")
 [node name="Left" type="Area2D" parent="."]
 scale = Vector2(200, 200)
 collision_layer = 0
-collision_mask = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
 position = Vector2(5.895, 1.99)
@@ -48,7 +48,7 @@ shape = SubResource("RectangleShape2D_0qtug")
 [node name="Right" type="Area2D" parent="."]
 scale = Vector2(200, 200)
 collision_layer = 0
-collision_mask = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
 position = Vector2(-0.0699997, 1.99)
@@ -66,19 +66,19 @@ side = "p2"
 position = Vector2(556, 346)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 449.0
-offset_top = 10.0
-offset_right = 533.0
-offset_bottom = 90.0
+offset_left = 664.0
+offset_top = 18.0
+offset_right = 748.0
+offset_bottom = 98.0
 theme_override_fonts/font = SubResource("SystemFont_src1v")
 theme_override_font_sizes/font_size = 120
 text = "0"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 646.0
-offset_top = 12.0
-offset_right = 730.0
-offset_bottom = 92.0
+offset_left = 442.0
+offset_top = 18.0
+offset_right = 526.0
+offset_bottom = 98.0
 theme_override_fonts/font = SubResource("SystemFont_src1v")
 theme_override_font_sizes/font_size = 120
 text = "0"
@@ -99,7 +99,7 @@ rotation = -3.14159
 scale = Vector2(0.503134, -12.8416)
 shape = SubResource("RectangleShape2D_usf6v")
 
-[connection signal="body_entered" from="Top" to="." method="_on_top_body_entered"]
-[connection signal="body_entered" from="Bottom" to="." method="_on_bottom_body_entered"]
-[connection signal="body_entered" from="Left" to="." method="_on_left_body_entered"]
-[connection signal="body_entered" from="Right" to="." method="_on_right_body_entered"]
+[connection signal="area_entered" from="Top" to="." method="_on_top_area_entered"]
+[connection signal="area_entered" from="Bottom" to="." method="_on_bottom_area_entered"]
+[connection signal="area_entered" from="Left" to="." method="_on_left_area_entered"]
+[connection signal="area_entered" from="Right" to="." method="_on_right_area_entered"]

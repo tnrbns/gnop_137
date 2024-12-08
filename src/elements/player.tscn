@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dndaf10u8xrnh"]
+[gd_scene load_steps=4 format=3 uid="uid://dndaf10u8xrnh"]
 
 [ext_resource type="Script" path="res://scripts/player_2d.gd" id="1_2rwd1"]
 
@@ -7,11 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4obpl"]
 size = Vector2(1.325, 3.87)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mrj7"]
-size = Vector2(1.575, 4.12)
-
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(20, 50)
+collision_layer = 2
 script = ExtResource("1_2rwd1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -22,14 +20,3 @@ texture = SubResource("PlaceholderTexture2D_r6wse")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.0375, 0.0150003)
 shape = SubResource("RectangleShape2D_4obpl")
-
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.0125, 0.06)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_8mrj7")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
