@@ -7,14 +7,14 @@
 [ext_resource type="Script" path="res://scripts/block.gd" id="4_dv2f8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0qtug"]
-size = Vector2(6.0075, 0.315)
+size = Vector2(8.00375, 0.315)
 
 [sub_resource type="SystemFont" id="SystemFont_src1v"]
 font_names = PackedStringArray("8-bit Arcade In")
 font_stretch = 75
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_usf6v"]
-size = Vector2(5.33378, 0.052176)
+size = Vector2(7.09366, 0.052176)
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_dyyl3")
@@ -25,7 +25,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2(2.89, -0.15)
+position = Vector2(3.88812, -0.15)
 shape = SubResource("RectangleShape2D_0qtug")
 
 [node name="Bottom" type="Area2D" parent="."]
@@ -34,7 +34,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
-position = Vector2(2.955, 3.325)
+position = Vector2(3.83, 4.385)
 shape = SubResource("RectangleShape2D_0qtug")
 
 [node name="Left" type="Area2D" parent="."]
@@ -43,7 +43,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
-position = Vector2(5.91, 1.975)
+position = Vector2(7.845, 2.005)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_0qtug")
 
@@ -58,7 +58,7 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_0qtug")
 
 [node name="Player" parent="." instance=ExtResource("1_ymufi")]
-position = Vector2(63, 309)
+position = Vector2(52, 405)
 
 [node name="Block" parent="." instance=ExtResource("3_3bf17")]
 visible = false
@@ -71,9 +71,9 @@ visible = false
 position = Vector2(148, 305)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 664.0
+offset_left = 964.0
 offset_top = 18.0
-offset_right = 748.0
+offset_right = 1048.0
 offset_bottom = 98.0
 theme_override_fonts/font = SubResource("SystemFont_src1v")
 theme_override_font_sizes/font_size = 120
@@ -95,13 +95,13 @@ position = Vector2(578, -30)
 scale = Vector2(-447.186, 43.2926)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0.00223616, 0.50817)
+position = Vector2(-0.440493, 0.508169)
 rotation = -3.14159
 scale = Vector2(0.503134, -12.8416)
 shape = SubResource("RectangleShape2D_usf6v")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.0290707, 15.5454)
+position = Vector2(-0.447241, 20.1189)
 rotation = -3.14159
 scale = Vector2(0.503134, -12.8416)
 shape = SubResource("RectangleShape2D_usf6v")

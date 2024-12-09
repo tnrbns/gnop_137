@@ -3,13 +3,15 @@ extends Node2D
 var block = preload("res://elements/block.tscn")
 
 func _ready():
-	inst(Vector2(600,700))
-	inst(Vector2(700,800))
-
+	inst(Vector2(958,302))
+	inst(Vector2(958,600))
 
 func inst(pos):
 	var instance = block.instantiate()
+	#instance.position(pos)
 	add_child(instance)
+	instance.call_deferred("set_position", pos)
+
 
 func _process(_delta):
 	$Label.text = str(Main.p1_score)

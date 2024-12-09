@@ -6,7 +6,7 @@ var is_attached = true
 var player = null
 
 # Define the game boundaries explicitly
-var bounds = Rect2(Vector2.ZERO, Vector2(1152, 648))
+var bounds = Rect2(Vector2.ZERO, Vector2(1560, 864))
 
 func _process(delta):
 	if is_attached and player:

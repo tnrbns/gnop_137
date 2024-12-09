@@ -21,6 +21,8 @@ Main="*res://scripts/main.gd"
 
 [display]
 
+window/size/viewport_width=1560
+window/size/viewport_height=864
 window/size/mode=2
 window/size/resizable=false
 
