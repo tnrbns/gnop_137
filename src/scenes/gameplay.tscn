@@ -55,14 +55,11 @@ position = Vector2(-0.16, 1.985)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_0qtug")
 
-[node name="Player2" parent="." instance=ExtResource("1_ymufi")]
-position = Vector2(1080, 325)
-scale = Vector2(31.4286, 103.464)
-
 [node name="Player" parent="." instance=ExtResource("1_ymufi")]
 position = Vector2(73, 332)
 
 [node name="Ball" parent="." instance=ExtResource("2_vfwaw")]
+visible = false
 position = Vector2(108, 335)
 
 [node name="Label" type="Label" parent="."]
