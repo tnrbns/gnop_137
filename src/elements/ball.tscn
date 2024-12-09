@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cchhhdpqgurr8"]
 
 [ext_resource type="Script" path="res://scripts/ball.gd" id="1_ekawm"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_3shpt"]
+[ext_resource type="Texture2D" uid="uid://2mvtvc16t4l2" path="res://assets/club_black.png" id="2_vu3ce"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gbq8m"]
 radius = 20.025
@@ -12,11 +11,10 @@ collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_ekawm")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-modulate = Color(1, 0, 1, 1)
-position = Vector2(3.8147e-06, 4.76837e-07)
-scale = Vector2(39.5442, 39.5442)
-mesh = SubResource("SphereMesh_3shpt")
+[node name="ClubBlack" type="Sprite2D" parent="."]
+position = Vector2(0.1875, 0.187498)
+scale = Vector2(0.09275, 0.09275)
+texture = ExtResource("2_vu3ce")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_gbq8m")

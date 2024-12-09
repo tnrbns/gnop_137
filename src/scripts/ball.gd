@@ -6,7 +6,7 @@ var is_attached = true
 var player = null
 
 # Define the game boundaries explicitly
-var bounds = Rect2(Vector2(20,10), Vector2(1100, 640))
+var bounds = Rect2(Vector2.ZERO, Vector2(1152, 648))
 
 func _process(delta):
 	if is_attached and player:
@@ -38,15 +38,8 @@ func reset_to_player():
 func _on_body_entered(_body):
 	# Bounce the ball horizontally if it hits a paddle
 	direction.x *= -1
-
+	
 func launch(initial_direction: Vector2):
 	# Set the initial direction and detach from the player
 	is_attached = false
 	direction = initial_direction
-#
-#func reset_to_player():
-	## Reset the ball to the player's position and reattach it
-	#if player:
-		#is_attached = true
-		#global_position = player.global_position + Vector2(-35, 0) # Offset as needed
-		#direction = Vector2.ZERO

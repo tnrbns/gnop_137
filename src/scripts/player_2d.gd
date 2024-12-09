@@ -26,10 +26,9 @@ func _physics_process(_delta):
 		ball.player = self # Pass reference of the player to the ball
 		get_parent().add_child(ball)
 		if side == 'p1':
-			ball.global_position = global_position + Vector2(35, 0) # Offset as needed
+			ball.global_position = global_position + Vector2(-35, 0) # Offset as needed
 		else:
-			ball.global_position = global_position + Vector2(35, 0) # Offset as needed
-
+			ball.global_position = global_position + Vector2(-35, 0) # Offset as needed
 	
 	# Shoot the ball
 	if Input.is_action_just_pressed("shoot") and ball.is_attached:

@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxvlvqf5xovse"]
+[gd_scene load_steps=9 format=3 uid="uid://dxvlvqf5xovse"]
 
 [ext_resource type="Script" path="res://scenes/Game.gd" id="1_dyyl3"]
 [ext_resource type="PackedScene" uid="uid://dndaf10u8xrnh" path="res://elements/player.tscn" id="1_ymufi"]
 [ext_resource type="PackedScene" uid="uid://cchhhdpqgurr8" path="res://elements/ball.tscn" id="2_vfwaw"]
+[ext_resource type="PackedScene" uid="uid://kgy2jdn2xc7u" path="res://elements/block.tscn" id="3_3bf17"]
+[ext_resource type="Script" path="res://scripts/block.gd" id="4_dv2f8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0qtug"]
 size = Vector2(6.0075, 0.315)
@@ -56,7 +58,13 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_0qtug")
 
 [node name="Player" parent="." instance=ExtResource("1_ymufi")]
-position = Vector2(84, 294)
+position = Vector2(63, 309)
+
+[node name="Block" parent="." instance=ExtResource("3_3bf17")]
+visible = false
+position = Vector2(-160, 87)
+collision_mask = 4
+script = ExtResource("4_dv2f8")
 
 [node name="Ball" parent="." instance=ExtResource("2_vfwaw")]
 visible = false
@@ -102,3 +110,4 @@ shape = SubResource("RectangleShape2D_usf6v")
 [connection signal="area_entered" from="Bottom" to="." method="_on_bottom_area_entered"]
 [connection signal="area_entered" from="Left" to="." method="_on_left_area_entered"]
 [connection signal="area_entered" from="Right" to="." method="_on_right_area_entered"]
+[connection signal="area_entered" from="Block" to="." method="_on_block_area_entered"]
