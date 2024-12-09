@@ -1,6 +1,6 @@
 extends Area2D
 
-const SPEED = 450.0
+const SPEED = 700.0
 var direction = Vector2.ZERO
 var is_attached = true # Determines if the ball is still following the player
 var player = null # Reference to the player node

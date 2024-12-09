@@ -56,7 +56,7 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_0qtug")
 
 [node name="Player" parent="." instance=ExtResource("1_ymufi")]
-position = Vector2(73, 332)
+position = Vector2(77, 302)
 
 [node name="Ball" parent="." instance=ExtResource("2_vfwaw")]
 visible = false
