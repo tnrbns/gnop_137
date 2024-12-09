@@ -39,6 +39,11 @@ func _on_body_entered(_body):
 	# Bounce the ball horizontally if it hits a paddle
 	direction.x *= -1
 	
+func _on_area_entered(area):
+	# Bounce the ball horizontally if it hits a block
+	if area.name == "block":  # Ensure the area is indeed a block
+		direction.x *= -1
+	
 func launch(initial_direction: Vector2):
 	# Set the initial direction and detach from the player
 	is_attached = false

@@ -3,15 +3,22 @@ extends Node2D
 var block = preload("res://elements/block.tscn")
 
 func _ready():
-	inst(Vector2(958,302))
-	inst(Vector2(958,600))
+	var start_x = 900
+	var start_y = 140
+	var column_gap = 65  # Horizontal gap between columns
+	var row_gap = 65    # Vertical gap between rows
 
+	for col in range(9): 
+		for row in range(11): 
+			var x_position = start_x + col * column_gap
+			var y_position = start_y + row * row_gap
+			inst(Vector2(x_position, y_position))
+			
 func inst(pos):
 	var instance = block.instantiate()
-	#instance.position(pos)
 	add_child(instance)
 	instance.call_deferred("set_position", pos)
-
+	instance.connect("area_entered", Callable(self, "_on_block_area_entered"))
 
 func _process(_delta):
 	$Label.text = str(Main.p1_score)
@@ -19,18 +26,15 @@ func _process(_delta):
 
 func _on_top_area_entered(area):
 	area.direction.y *= -1
-
+	
 func _on_bottom_area_entered(area):
 	area.direction.y *= -1
 	
 func _on_block_area_entered(area):
+	print("Block hit by ball")  # Debug message
 	area.direction.x *= -1
-	if area.direction.x > 0:
-		Main.p1_score += 1
-	else:
-		Main.p2_score += 1
-	print("hit!")
-	
+	Main.p1_score += 1
+				
 func _on_left_area_entered(area):
 	Main.p2_score += 1
 

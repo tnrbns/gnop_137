@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxvlvqf5xovse"]
+[gd_scene load_steps=8 format=3 uid="uid://dxvlvqf5xovse"]
 
 [ext_resource type="Script" path="res://scenes/Game.gd" id="1_dyyl3"]
 [ext_resource type="PackedScene" uid="uid://dndaf10u8xrnh" path="res://elements/player.tscn" id="1_ymufi"]
 [ext_resource type="PackedScene" uid="uid://cchhhdpqgurr8" path="res://elements/ball.tscn" id="2_vfwaw"]
 [ext_resource type="PackedScene" uid="uid://kgy2jdn2xc7u" path="res://elements/block.tscn" id="3_3bf17"]
-[ext_resource type="Script" path="res://scripts/block.gd" id="4_dv2f8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0qtug"]
 size = Vector2(8.00375, 0.315)
@@ -43,7 +42,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
-position = Vector2(7.845, 2.005)
+position = Vector2(7.96, 2.045)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_0qtug")
 
@@ -61,19 +60,16 @@ shape = SubResource("RectangleShape2D_0qtug")
 position = Vector2(52, 405)
 
 [node name="Block" parent="." instance=ExtResource("3_3bf17")]
-visible = false
-position = Vector2(-160, 87)
-collision_mask = 4
-script = ExtResource("4_dv2f8")
+position = Vector2(-504, 213)
 
 [node name="Ball" parent="." instance=ExtResource("2_vfwaw")]
 visible = false
 position = Vector2(148, 305)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 964.0
+offset_left = 1027.0
 offset_top = 18.0
-offset_right = 1048.0
+offset_right = 1111.0
 offset_bottom = 98.0
 theme_override_fonts/font = SubResource("SystemFont_src1v")
 theme_override_font_sizes/font_size = 120
@@ -110,4 +106,3 @@ shape = SubResource("RectangleShape2D_usf6v")
 [connection signal="area_entered" from="Bottom" to="." method="_on_bottom_area_entered"]
 [connection signal="area_entered" from="Left" to="." method="_on_left_area_entered"]
 [connection signal="area_entered" from="Right" to="." method="_on_right_area_entered"]
-[connection signal="area_entered" from="Block" to="." method="_on_block_area_entered"]
