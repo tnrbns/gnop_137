@@ -7,10 +7,8 @@ func _process(_delta):
 func _on_top_area_entered(area):
 	area.direction.y *= -1
 
-
 func _on_bottom_area_entered(area):
 	area.direction.y *= -1
-
 
 func _on_left_area_entered(area):
 	area.global_position = Vector2(576,320)
@@ -19,3 +17,5 @@ func _on_left_area_entered(area):
 func _on_right_area_entered(area):
 	area.global_position = Vector2(576,320)
 	Main.p1_score += 1
+	
+	

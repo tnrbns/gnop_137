@@ -41,7 +41,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
-position = Vector2(5.895, 1.99)
+position = Vector2(5.91, 1.975)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_0qtug")
 
@@ -51,19 +51,19 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
-position = Vector2(-0.0699997, 1.99)
+position = Vector2(-0.16, 1.985)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_0qtug")
+
+[node name="Player2" parent="." instance=ExtResource("1_ymufi")]
+position = Vector2(1080, 325)
+scale = Vector2(31.4286, 103.464)
 
 [node name="Player" parent="." instance=ExtResource("1_ymufi")]
 position = Vector2(73, 332)
 
-[node name="Player2" parent="." instance=ExtResource("1_ymufi")]
-position = Vector2(1090, 343)
-side = "p2"
-
 [node name="Ball" parent="." instance=ExtResource("2_vfwaw")]
-position = Vector2(556, 346)
+position = Vector2(108, 335)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 664.0
@@ -73,6 +73,7 @@ offset_bottom = 98.0
 theme_override_fonts/font = SubResource("SystemFont_src1v")
 theme_override_font_sizes/font_size = 120
 text = "0"
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 442.0
@@ -82,6 +83,7 @@ offset_bottom = 98.0
 theme_override_fonts/font = SubResource("SystemFont_src1v")
 theme_override_font_sizes/font_size = 120
 text = "0"
+horizontal_alignment = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(578, -30)
@@ -94,7 +96,7 @@ scale = Vector2(0.503134, -12.8416)
 shape = SubResource("RectangleShape2D_usf6v")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-0.0245983, 15.453)
+position = Vector2(-0.0290707, 15.5454)
 rotation = -3.14159
 scale = Vector2(0.503134, -12.8416)
 shape = SubResource("RectangleShape2D_usf6v")
