@@ -56,11 +56,11 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_0qtug")
 
 [node name="Player" parent="." instance=ExtResource("1_ymufi")]
-position = Vector2(77, 302)
+position = Vector2(84, 294)
 
 [node name="Ball" parent="." instance=ExtResource("2_vfwaw")]
 visible = false
-position = Vector2(108, 335)
+position = Vector2(148, 305)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 664.0
