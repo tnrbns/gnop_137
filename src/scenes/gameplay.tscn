@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cchhhdpqgurr8" path="res://elements/ball.tscn" id="2_vfwaw"]
 [ext_resource type="PackedScene" uid="uid://kgy2jdn2xc7u" path="res://elements/block.tscn" id="3_3bf17"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qtug"]
-size = Vector2(8.00375, 0.315)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4d7f"]
+size = Vector2(8.06, 0.32)
 
 [sub_resource type="SystemFont" id="SystemFont_src1v"]
 font_names = PackedStringArray("8-bit Arcade In")
@@ -18,46 +18,9 @@ size = Vector2(7.09366, 0.052176)
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_dyyl3")
 
-[node name="Top" type="Area2D" parent="."]
-scale = Vector2(200, 200)
-collision_layer = 0
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Top"]
-position = Vector2(3.88812, -0.15)
-shape = SubResource("RectangleShape2D_0qtug")
-
-[node name="Bottom" type="Area2D" parent="."]
-scale = Vector2(200, 200)
-collision_layer = 0
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom"]
-position = Vector2(3.83, 4.385)
-shape = SubResource("RectangleShape2D_0qtug")
-
-[node name="Left" type="Area2D" parent="."]
-scale = Vector2(200, 200)
-collision_layer = 0
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
-position = Vector2(7.96, 2.045)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_0qtug")
-
-[node name="Right" type="Area2D" parent="."]
-scale = Vector2(200, 200)
-collision_layer = 0
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
-position = Vector2(-0.16, 1.985)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_0qtug")
-
 [node name="Player" parent="." instance=ExtResource("1_ymufi")]
-position = Vector2(52, 405)
+position = Vector2(90, 425)
+collision_layer = 1
 
 [node name="Block" parent="." instance=ExtResource("3_3bf17")]
 position = Vector2(-282, 163)
@@ -65,6 +28,20 @@ position = Vector2(-282, 163)
 [node name="Ball" parent="." instance=ExtResource("2_vfwaw")]
 visible = false
 position = Vector2(148, 305)
+collision_layer = 1
+collision_mask = 1
+motion_mode = 1
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+scale = Vector2(200, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(3.95, -0.135)
+shape = SubResource("RectangleShape2D_m4d7f")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(3.905, 4.49)
+shape = SubResource("RectangleShape2D_m4d7f")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 1027.0
@@ -87,6 +64,7 @@ text = "0"
 horizontal_alignment = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(578, -30)
 scale = Vector2(-447.186, 43.2926)
 
@@ -101,8 +79,3 @@ position = Vector2(-0.447241, 20.1189)
 rotation = -3.14159
 scale = Vector2(0.503134, -12.8416)
 shape = SubResource("RectangleShape2D_usf6v")
-
-[connection signal="area_entered" from="Top" to="." method="_on_top_area_entered"]
-[connection signal="area_entered" from="Bottom" to="." method="_on_bottom_area_entered"]
-[connection signal="area_entered" from="Left" to="." method="_on_left_area_entered"]
-[connection signal="area_entered" from="Right" to="." method="_on_right_area_entered"]

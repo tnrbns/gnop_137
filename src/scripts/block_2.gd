@@ -9,8 +9,16 @@ func _process(delta):
 	pass
 
 func hit():
+	
+	GameManager.addPoints(1)
+	
 	$Sprite2D.visible = false
 	$CollisionShape2D.disabled = true
 	
+	var blocksLeft = get_tree().get_nodes_in_group('Block')
+	
+	print("blocks left: ", blocksLeft)
+	
 	await get_tree().create_timer(1).timeout
+	
 	queue_free()

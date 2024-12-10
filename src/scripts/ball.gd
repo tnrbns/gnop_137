@@ -1,6 +1,6 @@
-extends Area2D
+extends CharacterBody2D
 
-const SPEED = 700.0
+const SPEED = 600.0
 var direction = Vector2.ZERO
 var is_attached = true
 var player = null
@@ -10,11 +10,13 @@ var bounds = Rect2(Vector2.ZERO, Vector2(1560, 864))
 
 func _process(delta):
 	if is_attached and player:
-		# Ball follows player when attached
 		global_position = player.global_position + Vector2(35, 0)
 	else:
-		# Move the ball independently
-		global_position += direction * SPEED * delta
+		# Move and detect collisions
+		var collision = move_and_collide(direction * SPEED * delta)
+		if collision:
+			# Handle the collision response
+			direction = direction.bounce(collision.normal).normalized()
 		
 		# Check for left boundary (reset if ball goes beyond the left edge)
 		if global_position.x <= bounds.position.x:
@@ -35,14 +37,11 @@ func reset_to_player():
 		global_position = player.global_position + Vector2(35, 0)
 		direction = Vector2.ZERO
 
-func _on_body_entered(_body):
-	# Bounce the ball horizontally if it hits a paddle
-	direction.x *= -1
-	
-func _on_area_entered(area):
-	# Bounce the ball horizontally if it hits a block
-	if area.name == "block":  # Ensure the area is indeed a block
-		direction.x *= -1
+func _on_body_entered(body: Node):
+	if body and not is_attached:
+		# Assuming the body is something like a paddle or wall
+		var collision_normal = (global_position - body.global_position).normalized()
+		direction = direction.bounce(collision_normal).normalized()
 	
 func launch(initial_direction: Vector2):
 	# Set the initial direction and detach from the player

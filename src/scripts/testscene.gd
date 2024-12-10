@@ -9,7 +9,7 @@ func _ready():
 	var column_gap = 65  # Horizontal gap between columns
 	var row_gap = 65    # Vertical gap between rows
 
-	for col in range(9): 
+	for col in range(8): 
 		for row in range(11): 
 			var x_position = start_x + col * column_gap
 			var y_position = start_y + row * row_gap
@@ -19,8 +19,13 @@ func inst(pos):
 	var instance = block.instantiate()
 	add_child(instance)
 	instance.call_deferred("set_position", pos)
-
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+	
+func getColors():
+	var colors = [
+		
+	]
+	return colors
