@@ -1,17 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://dre1fa6x8lu3e"]
+[gd_scene load_steps=7 format=3 uid="uid://dre1fa6x8lu3e"]
 
 [ext_resource type="Script" path="res://scripts/Ball2.gd" id="1_o8ngm"]
 [ext_resource type="Texture2D" uid="uid://ct7s4eau2b34y" path="res://assets/joker_white.png" id="2_alds2"]
+[ext_resource type="Texture2D" uid="uid://dc70la0b8ghjr" path="res://assets/joker_icon_wht.png" id="3_ati0p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jgrb8"]
 radius = 19.2354
+
+[sub_resource type="Curve" id="Curve_i31vr"]
+_data = [Vector2(0.00416667, 1), 0.0, 0.0, 0, 0, Vector2(0.741667, 0.252747), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_i62h1"]
+colors = PackedColorArray(0.830335, 0.830335, 0.830335, 1, 1, 1, 1, 1)
 
 [node name="Ball2" type="CharacterBody2D"]
 script = ExtResource("1_o8ngm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_alds2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jgrb8")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color(1, 1, 1, 0.898039)
+amount = 1000
+lifetime = 0.4
+texture = ExtResource("3_ati0p")
+gravity = Vector2(0, 0)
+scale_amount_min = 0.03
+scale_amount_max = 0.03
+scale_amount_curve = SubResource("Curve_i31vr")
+color_ramp = SubResource("Gradient_i62h1")

@@ -22,15 +22,29 @@ size = Vector2(102, 963)
 [node name="test level" type="Node2D"]
 script = ExtResource("1_20r7q")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 120.0
+script = ExtResource("2_dmxbk")
+
+[node name="TimeLabel" type="Label" parent="."]
+offset_left = 739.0
+offset_top = 4.0
+offset_right = 838.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("3_pfqtj")
+theme_override_font_sizes/font_size = 50
+text = "2:30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Paddle" parent="." instance=ExtResource("2_1ax3e")]
 position = Vector2(94, 434)
 scale = Vector2(1, 0.99018)
-motion_mode = 1
 
 [node name="Bounds" type="StaticBody2D" parent="."]
 
 [node name="Top" type="CollisionShape2D" parent="Bounds"]
-position = Vector2(781, -8)
+position = Vector2(787, -8)
 shape = SubResource("RectangleShape2D_uhkk3")
 
 [node name="Bottom" type="CollisionShape2D" parent="Bounds"]
@@ -46,22 +60,6 @@ shape = SubResource("RectangleShape2D_luklr")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Deathzone"]
 position = Vector2(1607, 476)
 shape = SubResource("RectangleShape2D_luklr")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 150.0
-one_shot = true
-script = ExtResource("2_dmxbk")
-
-[node name="TimeLabel" type="Label" parent="."]
-offset_left = 721.0
-offset_top = 4.0
-offset_right = 848.0
-offset_bottom = 54.0
-theme_override_fonts/font = ExtResource("3_pfqtj")
-theme_override_font_sizes/font_size = 50
-text = "02:30"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="ScoreP1" type="Label" parent="."]
 offset_left = 363.0
@@ -91,5 +89,3 @@ position = Vector2(783.375, 456)
 scale = Vector2(4.75012, 748)
 mesh = SubResource("BoxMesh_3bjme")
 texture = SubResource("CanvasTexture_4kb1y")
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
