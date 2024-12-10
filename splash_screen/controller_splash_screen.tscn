@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://kqvcy0xayjx8"]
+
+[ext_resource type="Script" path="res://splash_screen/splash_screen.gd" id="1_kjk65"]
+[ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://assets/fonts/JejuHallasan-Regular.ttf" id="2_6s7us"]
+[ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://assets/fonts/Gaegu-Bold.ttf" id="3_bbi8a"]
+
+[node name="ControllerSplashScreen" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_kjk65")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_6s7us")
+theme_override_font_sizes/font_size = 250
+text = "GNOP"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_bbi8a")
+theme_override_font_sizes/font_size = 65
+text = "GNOP's No Ordinary Pong"
+horizontal_alignment = 1
+autowrap_mode = 2
