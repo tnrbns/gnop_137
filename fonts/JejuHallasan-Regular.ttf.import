@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dtu8d7rvuunps"
-path="res://.godot/imported/JejuHallasan-Regular.ttf-65b7ab0131380b7b236ff346d75c1829.fontdata"
+path="res://.godot/imported/JejuHallasan-Regular.ttf-662fd931367c4d417b81857fd963fc38.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/JejuHallasan-Regular.ttf"
-dest_files=["res://.godot/imported/JejuHallasan-Regular.ttf-65b7ab0131380b7b236ff346d75c1829.fontdata"]
+source_file="res://fonts/JejuHallasan-Regular.ttf"
+dest_files=["res://.godot/imported/JejuHallasan-Regular.ttf-662fd931367c4d417b81857fd963fc38.fontdata"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://rd3thyicdh3x"
-path="res://.godot/imported/Gaegu-Regular.ttf-cafec061477372cb1b0df2dc20908ac9.fontdata"
+path="res://.godot/imported/Gaegu-Regular.ttf-0c1e2f45ac3fdc7c4c070486ff87556d.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Gaegu-Regular.ttf"
-dest_files=["res://.godot/imported/Gaegu-Regular.ttf-cafec061477372cb1b0df2dc20908ac9.fontdata"]
+source_file="res://fonts/Gaegu-Regular.ttf"
+dest_files=["res://.godot/imported/Gaegu-Regular.ttf-0c1e2f45ac3fdc7c4c070486ff87556d.fontdata"]
 
 [params]
 

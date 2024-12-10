@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://rr601o7uoeh3"
-path="res://.godot/imported/Gaegu-Bold.ttf-a21840ef56e6129dd8bdafef82183c80.fontdata"
+path="res://.godot/imported/Gaegu-Bold.ttf-ad81a0133fe567c5e76d29b6c72a0dd4.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Gaegu-Bold.ttf"
-dest_files=["res://.godot/imported/Gaegu-Bold.ttf-a21840ef56e6129dd8bdafef82183c80.fontdata"]
+source_file="res://fonts/Gaegu-Bold.ttf"
+dest_files=["res://.godot/imported/Gaegu-Bold.ttf-ad81a0133fe567c5e76d29b6c72a0dd4.fontdata"]
 
 [params]
 

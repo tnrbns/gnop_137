@@ -1,0 +1,190 @@
+[gd_scene load_steps=11 format=3 uid="uid://co6esh7ywgpd6"]
+
+[ext_resource type="Texture2D" uid="uid://b31ykyuan3j8r" path="res://assets/home-button.png" id="1_aqq72"]
+[ext_resource type="Script" path="res://helpmenu.gd" id="1_p2enu"]
+[ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://fonts/JejuHallasan-Regular.ttf" id="2_0ppgf"]
+[ext_resource type="Texture2D" uid="uid://4hij004f3dbh" path="res://assets/w_key.jpg" id="2_ytst74"]
+[ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://fonts/Gaegu-Bold.ttf" id="3_rxdx5"]
+[ext_resource type="FontFile" uid="uid://rd3thyicdh3x" path="res://fonts/Gaegu-Regular.ttf" id="4_hv228"]
+[ext_resource type="Texture2D" uid="uid://ksy5ai315v43" path="res://assets/s_key.jpg" id="7_0d01i"]
+[ext_resource type="Texture2D" uid="uid://cavn3y87axgww" path="res://assets/click-removebg-preview.png" id="8_jot54"]
+[ext_resource type="Texture2D" uid="uid://hctss77drj5a" path="res://assets/up_arrow.jpg" id="9_lwtfq"]
+[ext_resource type="Texture2D" uid="uid://dlir5u72rnnfl" path="res://assets/arrow-down.svg" id="10_gy338"]
+
+[node name="Help" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p2enu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_aqq72")
+
+[node name="BackButton" type="TextureButton" parent="ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_aqq72")
+texture_pressed = ExtResource("1_aqq72")
+
+[node name="VBoxContainer0" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -280.5
+offset_right = 342.0
+offset_bottom = 560.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 200
+
+[node name="Welcome" type="Label" parent="VBoxContainer0"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rxdx5")
+theme_override_font_sizes/font_size = 45
+text = "Welcome to"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -256.5
+offset_right = 342.0
+offset_bottom = 538.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0ppgf")
+theme_override_font_sizes/font_size = 250
+text = "GNOP"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -305.0
+offset_top = -33.0
+offset_right = 295.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 200
+
+[node name="Phrase" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 30
+text = "Challenge a friend and let the battle begin!"
+horizontal_alignment = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -503.0
+offset_top = -3.0
+offset_right = 497.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Phrase2" type="Label" parent="VBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 30
+text = "Claim as many of your opponent's tiles as you can before the clock runs out.
+Are you up for the challenge? Game on!"
+horizontal_alignment = 1
+
+[node name="WKey" type="Sprite2D" parent="."]
+position = Vector2(278, 454)
+scale = Vector2(0.181783, 0.171319)
+texture = ExtResource("2_ytst74")
+
+[node name="SKey" type="Sprite2D" parent="."]
+position = Vector2(279, 552)
+scale = Vector2(0.173524, 0.172837)
+texture = ExtResource("7_0d01i")
+
+[node name="Click-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(950, 508)
+scale = Vector2(1, 1.11131)
+texture = ExtResource("8_jot54")
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = 245.0
+offset_right = 708.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Phrase2" type="Label" parent="VBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 30
+text = "Adjust ball force and angle"
+horizontal_alignment = 1
+
+[node name="UpArrow" type="Sprite2D" parent="."]
+position = Vector2(185, 452)
+scale = Vector2(0.110737, 0.105682)
+texture = ExtResource("9_lwtfq")
+
+[node name="Arrow-down" type="Sprite2D" parent="."]
+position = Vector2(369, 555)
+scale = Vector2(0.0674388, 0.056293)
+texture = ExtResource("10_gy338")
+
+[connection signal="pressed" from="ColorRect/TextureRect/BackButton" to="." method="_on_back_button_pressed"]

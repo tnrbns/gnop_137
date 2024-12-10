@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c3r2ju7lr5ov1"
-path="res://.godot/imported/Gaegu-Light.ttf-213cc37a5f0c680d215d4652cc8c8d61.fontdata"
+path="res://.godot/imported/Gaegu-Light.ttf-3f5f68791405d05f331bcd62515bbd48.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Gaegu-Light.ttf"
-dest_files=["res://.godot/imported/Gaegu-Light.ttf-213cc37a5f0c680d215d4652cc8c8d61.fontdata"]
+source_file="res://fonts/Gaegu-Light.ttf"
+dest_files=["res://.godot/imported/Gaegu-Light.ttf-3f5f68791405d05f331bcd62515bbd48.fontdata"]
 
 [params]
 
