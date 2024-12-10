@@ -5,9 +5,9 @@ var block = preload("res://elements/block2.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var start_x = 900
-	var start_y = 130
-	var column_gap = 65  # Horizontal gap between columns
-	var row_gap = 65    # Vertical gap between rows
+	var start_y = 110
+	var column_gap = 70  # Horizontal gap between columns
+	var row_gap = 70    # Vertical gap between rows
 
 	for col in range(8): 
 		for row in range(11): 
@@ -22,7 +22,7 @@ func inst(pos):
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	$ScoreP1.text = str(GameManager.score)
 	
 func getColors():
 	var colors = [

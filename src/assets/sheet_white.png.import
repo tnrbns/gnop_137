@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc4thdbahjjws"
-path="res://.godot/imported/joker_icon_blk.png-eea3944f991047e64cea65d01e353d1c.ctex"
+uid="uid://bko8npqxsfp4k"
+path="res://.godot/imported/sheet_white.png-a23b93fcb196939fc5fde8e989690da1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/joker_icon_blk.png"
-dest_files=["res://.godot/imported/joker_icon_blk.png-eea3944f991047e64cea65d01e353d1c.ctex"]
+source_file="res://assets/sheet_white.png"
+dest_files=["res://.godot/imported/sheet_white.png-a23b93fcb196939fc5fde8e989690da1.ctex"]
 
 [params]
 
