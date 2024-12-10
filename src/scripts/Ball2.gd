@@ -26,8 +26,8 @@ func _physics_process(delta: float) -> void:
 			currBall -= 1
 			print(currBall)
 			reset_to_paddle()
-			if currBall < 0:
-				get_tree().change_scene_to_file("res://scenes/endgame.tscn")
+			#if currBall < 0:
+				#get_tree().change_scene_to_file("res://scenes/endgame.tscn")
 
 func reset_to_paddle():
 	# Reset the ball to the paddle's position
