@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 600
+var speed = 650
 var vel = Vector2.ZERO
 var direction = Vector2.ZERO
 var is_active = false  # Default to inactive

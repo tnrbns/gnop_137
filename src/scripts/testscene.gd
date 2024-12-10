@@ -5,7 +5,7 @@ var block = preload("res://elements/block2.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var start_x = 900
-	var start_y = 140
+	var start_y = 130
 	var column_gap = 65  # Horizontal gap between columns
 	var row_gap = 65    # Vertical gap between rows
 
