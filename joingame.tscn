@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://co6esh7ywgpd6"]
+[gd_scene load_steps=4 format=3 uid="uid://co6esh7ywgpd6"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_jpohn"]
 [ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://fonts/JejuHallasan-Regular.ttf" id="2_0ppgf"]
 [ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://fonts/Gaegu-Bold.ttf" id="3_rxdx5"]
 [ext_resource type="FontFile" uid="uid://rd3thyicdh3x" path="res://fonts/Gaegu-Regular.ttf" id="4_hv228"]
@@ -12,7 +11,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jpohn")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -89,10 +87,23 @@ theme_override_constants/separation = 16
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 4
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0.552956, 0.552956, 0.552956, 1)
 theme_override_fonts/font = ExtResource("4_hv228")
 theme_override_font_sizes/font_size = 50
 placeholder_text = "Enter IP address..."
+alignment = 1
+clear_button_enabled = true
+caret_blink = true
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_placeholder_color = Color(0.552956, 0.552956, 0.552956, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 50
+placeholder_text = "Enter playername.."
 alignment = 1
 clear_button_enabled = true
 caret_blink = true
