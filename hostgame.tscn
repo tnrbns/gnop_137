@@ -175,6 +175,7 @@ clear_button_enabled = true
 caret_blink = true
 
 [node name="Label2" type="Label" parent="VBoxContainer/EnterPlayerName"]
+layout_mode = 0
 offset_left = -6.0
 offset_top = 73.0
 offset_right = 497.0

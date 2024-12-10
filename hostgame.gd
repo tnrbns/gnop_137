@@ -1,5 +1,7 @@
 extends Control
 
+@export var Address = "127.0.0.1"
+@export var port = 8910
 # Use `@onready` without the @ symbol
 @onready var host_button = $VBoxContainer4/HostButton
 @onready var enter_host_name = $VBoxContainer/EnterPlayerName
@@ -23,6 +25,19 @@ func _on_back_button_pressed():
 # Join button pressed
 func _on_host_button_pressed():
 	print("Start Gameplay")
+	var peer = ENetMultiplayerPeer.new()
+	var error = peer.create_server(port, 2)  # Maximum of 2 clients
+	
+	if error != OK:
+		print("Cannot host with error: " + str(error))
+		return
+	
+	peer.get_host().compress(ENetConnection.COMPRESS_RANGE_CODER)
+	multiplayer.set_multiplayer_peer(peer)
+	
+	print("Waiting for Players!")
+	get_tree().change_scene_to_file("res://menu.tscn")
+	
 	# Add your gameplay logic here
 
 # Called when the player name is submitted
