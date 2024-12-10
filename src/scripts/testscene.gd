@@ -1,22 +1,36 @@
 extends Node2D
 
 var block = preload("res://elements/block2.tscn")
+var block_client = preload("res://elements/block2_client.tscn")
+
 var timelabel: Label
 var timer: Timer
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	var start_x = 900
+	var start_x_right = 900  # X position for the right side blocks
+	var start_x_left = 180   # X position for the left side blocks
 	var start_y = 110
-	var column_gap = 70  # Horizontal gap between columns
-	var row_gap = 70     # Vertical gap between rows
-
+	var column_gap = 70      # Horizontal gap between columns
+	var row_gap = 70         # Vertical gap between rows
+	
+	# Create blocks on the right side
 	for col in range(8): 
 		for row in range(11): 
-			var x_position = start_x + col * column_gap
+			var x_position = start_x_right + col * column_gap
 			var y_position = start_y + row * row_gap
-			inst(Vector2(x_position, y_position))
-			
+			var instance = block.instantiate()
+			add_child(instance)
+			instance.position = Vector2(x_position, y_position)
+	
+	# Create mirrored blocks on the left side
+	for col in range(8): 
+		for row in range(11): 
+			var x_position = start_x_left + (7 - col) * column_gap
+			var y_position = start_y + row * row_gap
+			var instance = block_client.instantiate()
+			add_child(instance)
+			instance.position = Vector2(x_position, y_position)
+	
 	timelabel = $TimeLabel
 	timer = $Timer
 	
@@ -29,7 +43,9 @@ func inst(pos: Vector2):
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$ScoreP1.text = str(GameManager.score)
+	$ScoreP1.text = str(GameManager.score_p1)
+	$ScoreP2.text = str(GameManager.score_p2)
+	
 	timelabel.text = time_to_minutes_secs_mili(timer.get_time_left())
 	
 func time_to_minutes_secs_mili(time: float) -> String:

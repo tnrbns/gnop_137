@@ -1,23 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://ow1s85bcxtui"]
+[gd_scene load_steps=5 format=3 uid="uid://bovid67curnup"]
 
-[ext_resource type="Script" path="res://scripts/block_2.gd" id="1_20vbw"]
-[ext_resource type="Texture2D" uid="uid://bmr6kndjkbcuj" path="res://assets/sheet_black.png" id="2_wx60o"]
-[ext_resource type="Script" path="res://scripts/sprite_2d.gd" id="3_iqtt1"]
+[ext_resource type="Script" path="res://scripts/block_2_client.gd" id="1_qhfa5"]
+[ext_resource type="Texture2D" uid="uid://bko8npqxsfp4k" path="res://assets/sheet_white.png" id="2_dkd1v"]
+[ext_resource type="Script" path="res://scripts/sprite_2d.gd" id="3_hj5d8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmgcc"]
 size = Vector2(69.5, 71.5)
 
 [node name="Block2" type="RigidBody2D"]
+collision_layer = 2
 collision_mask = 0
 gravity_scale = 0.0
-script = ExtResource("1_20vbw")
+script = ExtResource("1_qhfa5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_wx60o")
+texture = ExtResource("2_dkd1v")
 region_enabled = true
 region_rect = Rect2(0, 0, 455, 455)
-script = ExtResource("3_iqtt1")
+script = ExtResource("3_hj5d8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rmgcc")
