@@ -60,7 +60,7 @@ shape = SubResource("RectangleShape2D_0qtug")
 position = Vector2(52, 405)
 
 [node name="Block" parent="." instance=ExtResource("3_3bf17")]
-position = Vector2(-504, 213)
+position = Vector2(-282, 163)
 
 [node name="Ball" parent="." instance=ExtResource("2_vfwaw")]
 visible = false

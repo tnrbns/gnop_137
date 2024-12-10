@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://bha2tag8jkx1q"]
+
+[ext_resource type="Script" path="res://scripts/testscene.gd" id="1_20r7q"]
+[ext_resource type="PackedScene" uid="uid://casxsw0dc2jox" path="res://elements/paddle.tscn" id="2_1ax3e"]
+[ext_resource type="PackedScene" uid="uid://dre1fa6x8lu3e" path="res://elements/ball2.tscn" id="2_1taka"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhkk3"]
+size = Vector2(1586, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vc8st"]
+size = Vector2(1567, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhvnn"]
+size = Vector2(87.25, 1028)
+
+[node name="test level" type="Node2D"]
+script = ExtResource("1_20r7q")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(781, 430)
+
+[node name="Ball2" parent="." instance=ExtResource("2_1taka")]
+position = Vector2(587, 320)
+
+[node name="Paddle" parent="." instance=ExtResource("2_1ax3e")]
+position = Vector2(64, 517)
+
+[node name="Bounds" type="StaticBody2D" parent="."]
+
+[node name="Top" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(794, -39)
+shape = SubResource("RectangleShape2D_uhkk3")
+
+[node name="Bottom" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(776, 900)
+shape = SubResource("RectangleShape2D_vc8st")
+
+[node name="Right" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(1600, 474)
+shape = SubResource("RectangleShape2D_fhvnn")
