@@ -1,5 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://co6esh7ywgpd6"]
+[gd_scene load_steps=11 format=3 uid="uid://co6esh7ywgpd6"]
 
+[ext_resource type="Texture2D" uid="uid://b31ykyuan3j8r" path="res://assets/home-button.png" id="1_aqq72"]
+[ext_resource type="Script" path="res://joingame.gd" id="1_p2enu"]
 [ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://fonts/JejuHallasan-Regular.ttf" id="2_0ppgf"]
 [ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://fonts/Gaegu-Bold.ttf" id="3_rxdx5"]
 [ext_resource type="FontFile" uid="uid://rd3thyicdh3x" path="res://fonts/Gaegu-Regular.ttf" id="4_hv228"]
@@ -40,17 +42,16 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5f17"]
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p58ls"]
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lsch6"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.423651, 0.423651, 0.423651, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78lib"]
 content_margin_left = 10.0
@@ -58,10 +59,10 @@ content_margin_top = 10.0
 content_margin_right = 10.0
 content_margin_bottom = 10.0
 bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="JoinGame" type="Control"]
 layout_mode = 3
@@ -70,6 +71,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_p2enu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -78,6 +80,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_aqq72")
+
+[node name="BackButton" type="TextureButton" parent="ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_aqq72")
+texture_pressed = ExtResource("1_aqq72")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -159,7 +174,7 @@ alignment = 1
 clear_button_enabled = true
 caret_blink = true
 
-[node name="EnterIPAddress2" type="LineEdit" parent="VBoxContainer"]
+[node name="EnterPlayerName" type="LineEdit" parent="VBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 4
@@ -193,8 +208,12 @@ layout_mode = 2
 size_flags_stretch_ratio = 20.0
 theme_override_fonts/font = ExtResource("2_0ppgf")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxFlat_s5f17")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_p58ls")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_lsch6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_78lib")
 text = "JOIN
 "
+
+[connection signal="pressed" from="ColorRect/TextureRect/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/EnterIPAddress" to="." method="_on_enter_ip_address_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/EnterPlayerName" to="." method="_on_enter_player_name_text_submitted"]
+[connection signal="pressed" from="VBoxContainer4/JoinButton" to="." method="_on_join_button_pressed"]
