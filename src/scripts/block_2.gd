@@ -7,34 +7,34 @@ func hit():
 	$CPUParticles2D.emitting = true
 	# Check the current texture position
 	if sprite.region_rect.position.x == 2730:  # 
-		GameManager.addPointsP1(6)  # Award 6 points
+		GameManager.addPointsP1(18)  # Award 6 points
 		# Change the texture to "5" (position 2275)
 		sprite.region_rect.position.x = 2275
 		print("Texture changed to 5")
 		
 	elif sprite.region_rect.position.x == 2275:  
-		GameManager.addPointsP1(5)  
+		GameManager.addPointsP1(15)  
 		sprite.region_rect.position.x = 1820
 		print("Texture changed to 4")	
 		
 	elif sprite.region_rect.position.x == 1820:  
-		GameManager.addPointsP1(4)  
+		GameManager.addPointsP1(12)  
 		sprite.region_rect.position.x = 1365
 		print("Texture changed to 3")	
 		
 	elif sprite.region_rect.position.x == 1365:  
-		GameManager.addPointsP1(3)  
+		GameManager.addPointsP1(9)  
 		sprite.region_rect.position.x = 910
 		print("Texture changed to 2")	
 		
 	elif sprite.region_rect.position.x == 910:  
-		GameManager.addPointsP1(2)  
+		GameManager.addPointsP1(6)  
 		sprite.region_rect.position.x = 455
 		print("Texture changed to 1")
 		
 	else:
 		# Default behavior for other blocks
-		GameManager.addPointsP1(1)
+		GameManager.addPointsP1(3)
 		
 		sprite.region_rect.position.x = 0		
 		# Hide and disable the block

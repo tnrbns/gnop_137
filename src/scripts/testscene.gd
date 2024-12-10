@@ -14,7 +14,7 @@ func _ready():
 	var row_gap = 70         # Vertical gap between rows
 	
 	# Create blocks on the right side
-	for col in range(8): 
+	for col in range(5): 
 		for row in range(11): 
 			var x_position = start_x_right + col * column_gap
 			var y_position = start_y + row * row_gap
@@ -23,7 +23,7 @@ func _ready():
 			instance.position = Vector2(x_position, y_position)
 	
 	# Create mirrored blocks on the left side
-	for col in range(8): 
+	for col in range(5): 
 		for row in range(11): 
 			var x_position = start_x_left + (7 - col) * column_gap
 			var y_position = start_y + row * row_gap
@@ -56,3 +56,4 @@ func time_to_minutes_secs_mili(time: float) -> String:
 
 func _on_timer_timeout():
 	print("DONE!")
+	get_tree().change_scene_to_file("res://scenes/endgame.tscn")
