@@ -1,0 +1,215 @@
+[gd_scene load_steps=10 format=3 uid="uid://nprrvvl3j1pc"]
+
+[ext_resource type="Texture2D" uid="uid://l1xwlhu32jwb" path="res://assets/home-button.png" id="1_aqq72"]
+[ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://assets/fonts/JejuHallasan-Regular.ttf" id="2_0ppgf"]
+[ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://assets/fonts/Gaegu-Bold.ttf" id="3_rxdx5"]
+[ext_resource type="FontFile" uid="uid://rd3thyicdh3x" path="res://assets/fonts/Gaegu-Regular.ttf" id="4_hv228"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lsch6"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.423651, 0.423651, 0.423651, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78lib"]
+content_margin_left = 18.0
+content_margin_top = 18.0
+content_margin_right = 18.0
+content_margin_bottom = 18.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cd0wk"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1km2"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33jpd"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[node name="JoinGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_aqq72")
+
+[node name="BackButton" type="TextureButton" parent="ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_aqq72")
+texture_pressed = ExtResource("1_aqq72")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -256.5
+offset_right = 342.0
+offset_bottom = 538.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0ppgf")
+theme_override_font_sizes/font_size = 250
+text = "GNOP"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -52.5
+offset_right = 342.0
+offset_bottom = 742.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 200
+
+[node name="Label2" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rxdx5")
+theme_override_font_sizes/font_size = 60
+text = "Joining Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="JoinButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = 181.0
+offset_right = 114.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 20.0
+theme_override_fonts/font = ExtResource("2_0ppgf")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_lsch6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_78lib")
+text = "JOIN
+"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -307.0
+offset_top = 47.0
+offset_right = 307.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnterIPAddress" type="LineEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.552956, 0.552956, 0.552956, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxFlat_cd0wk")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_w1km2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_33jpd")
+placeholder_text = "Enter IP address..."
+alignment = 1
+clear_button_enabled = true
+caret_blink = true
+
+[node name="EnterPlayerName" type="LineEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.552956, 0.552956, 0.552956, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxFlat_cd0wk")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_w1km2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_33jpd")
+placeholder_text = "Enter playername..."
+alignment = 1
+clear_button_enabled = true
+caret_blink = true
+
+[connection signal="pressed" from="ColorRect/TextureRect/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="JoinButton" to="." method="_on_join_button_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/EnterIPAddress" to="." method="_on_enter_ip_address_text_submitted"]
+[connection signal="text_submitted" from="VBoxContainer/EnterPlayerName" to="." method="_on_enter_player_name_text_submitted"]

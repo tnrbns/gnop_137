@@ -1,0 +1,201 @@
+[gd_scene load_steps=14 format=3 uid="uid://c6mm6uufbtgt"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_oqrlk"]
+[ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://assets/fonts/JejuHallasan-Regular.ttf" id="2_5ml6j"]
+[ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://assets/fonts/Gaegu-Bold.ttf" id="3_24mlg"]
+[ext_resource type="AudioStream" uid="uid://dfomey318r8kt" path="res://AudioPack/tunetank.com_option-hover-click.wav" id="4_6anyq"]
+[ext_resource type="AudioStream" uid="uid://djgl8waf8d0fs" path="res://AudioPack/tunetank.com_click-21.wav" id="4_6xcla"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3p8cx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6m4ir"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ec8vq"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sbulu"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlilc"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ummw2"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p02ah"]
+bg_color = Color(0.658824, 0.0313726, 0.0313726, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kw67n"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oqrlk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -256.5
+offset_right = 342.0
+offset_bottom = 538.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5ml6j")
+theme_override_font_sizes/font_size = 250
+text = "GNOP"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -52.0
+offset_right = 342.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 200
+
+[node name="Label2" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_24mlg")
+theme_override_font_sizes/font_size = 60
+text = "GNOP's No Ordinary Pong"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = 44.0
+offset_right = 221.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Hover" type="AudioStreamPlayer" parent="VBoxContainer"]
+stream = ExtResource("4_6anyq")
+
+[node name="Click" type="AudioStreamPlayer" parent="VBoxContainer"]
+stream = ExtResource("4_6xcla")
+
+[node name="JoinButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5ml6j")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3p8cx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6m4ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ec8vq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sbulu")
+text = "Join Game"
+
+[node name="HostButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5ml6j")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3p8cx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rlilc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ec8vq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sbulu")
+text = "Host Game"
+
+[node name="HelpButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5ml6j")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3p8cx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ummw2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ec8vq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sbulu")
+text = "Help"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5ml6j")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3p8cx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_p02ah")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ec8vq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kw67n")
+text = "Quit"
+
+[connection signal="mouse_entered" from="VBoxContainer/JoinButton" to="." method="_on_join_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/JoinButton" to="." method="_on_join_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/HostButton" to="." method="_on_host_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/HelpButton" to="." method="_on_help_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
