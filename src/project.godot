@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GNOP (GNOP's No Ordinary Pong)"
-run/main_scene="res://scenes/mainScreen.tscn"
+run/main_scene="res://splash_screen/splash_screen_manager.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
