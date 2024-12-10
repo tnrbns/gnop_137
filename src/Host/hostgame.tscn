@@ -1,0 +1,238 @@
+[gd_scene load_steps=11 format=3 uid="uid://dkqjsu7a35nyu"]
+
+[ext_resource type="Script" path="res://Host/hostgame.gd" id="1_gd8jl"]
+[ext_resource type="Texture2D" uid="uid://l1xwlhu32jwb" path="res://assets/home-button.png" id="2_dfrku"]
+[ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://assets/fonts/JejuHallasan-Regular.ttf" id="3_xg8j5"]
+[ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://assets/fonts/Gaegu-Bold.ttf" id="4_r0l5r"]
+[ext_resource type="FontFile" uid="uid://rd3thyicdh3x" path="res://assets/fonts/Gaegu-Regular.ttf" id="5_waitj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cd0wk"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1km2"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33jpd"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lsch6"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.423651, 0.423651, 0.423651, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_78lib"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="HostGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gd8jl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_dfrku")
+
+[node name="BackButton" type="TextureButton" parent="ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("2_dfrku")
+texture_pressed = ExtResource("2_dfrku")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -256.5
+offset_right = 342.0
+offset_bottom = 538.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 200
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xg8j5")
+theme_override_font_sizes/font_size = 250
+text = "GNOP"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = -52.5
+offset_right = 342.0
+offset_bottom = 742.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 200
+
+[node name="Label2" type="Label" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_r0l5r")
+theme_override_font_sizes/font_size = 60
+text = "Joining Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.0
+offset_top = 35.0
+offset_right = 342.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="EnterPlayerName" type="LineEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.552956, 0.552956, 0.552956, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_waitj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_cd0wk")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_w1km2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_33jpd")
+placeholder_text = "Enter playername..."
+alignment = 1
+clear_button_enabled = true
+caret_blink = true
+
+[node name="Label2" type="Label" parent="VBoxContainer/EnterPlayerName"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 73.0
+offset_right = 497.0
+offset_bottom = 134.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_r0l5r")
+theme_override_font_sizes/font_size = 35
+text = "Your local address: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IPPanel" type="Panel" parent="VBoxContainer/EnterPlayerName/Label2"]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 10.0
+offset_right = 688.0
+offset_bottom = 50.0
+
+[node name="Label" type="Label" parent="VBoxContainer/EnterPlayerName/Label2/IPPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.137
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = -2.0
+offset_right = 236.996
+offset_bottom = 21.0
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 467.0
+offset_top = 505.0
+offset_right = -451.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HostButton" type="Button" parent="VBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+size_flags_stretch_ratio = 20.0
+theme_override_fonts/font = ExtResource("3_xg8j5")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_lsch6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_78lib")
+text = "HOST
+"
+
+[node name="BroadcastTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="pressed" from="ColorRect/TextureRect/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/EnterPlayerName" to="." method="_on_enter_player_name_text_submitted"]
+[connection signal="pressed" from="VBoxContainer4/HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="timeout" from="BroadcastTimer" to="." method="_on_broadcast_timer_timeout"]
