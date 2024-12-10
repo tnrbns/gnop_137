@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c6mm6uufbtgt"]
+[gd_scene load_steps=14 format=3 uid="uid://uintiymqtyj2"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_oqrlk"]
 [ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://assets/fonts/JejuHallasan-Regular.ttf" id="2_5ml6j"]
