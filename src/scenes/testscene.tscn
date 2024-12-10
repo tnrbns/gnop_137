@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bha2tag8jkx1q"]
+[gd_scene load_steps=13 format=3 uid="uid://bha2tag8jkx1q"]
 
 [ext_resource type="Script" path="res://scripts/testscene.gd" id="1_20r7q"]
 [ext_resource type="PackedScene" uid="uid://casxsw0dc2jox" path="res://elements/paddle.tscn" id="2_1ax3e"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://rd3thyicdh3x" path="res://assets/fonts/Gaegu-Regular.ttf" id="3_pfqtj"]
 [ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://assets/fonts/Gaegu-Bold.ttf" id="3_r6djg"]
 [ext_resource type="PackedScene" uid="uid://c3py55j277d47" path="res://elements/paddle_client.tscn" id="6_5u4nq"]
+[ext_resource type="Texture2D" uid="uid://dq6ht85fm8otn" path="res://assets/plain_starfield_1.png" id="7_yrpop"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhkk3"]
 size = Vector2(1586, 154)
@@ -29,7 +30,7 @@ scale = Vector2(1, 0.99018)
 motion_mode = 1
 
 [node name="Paddle2" parent="." instance=ExtResource("6_5u4nq")]
-position = Vector2(1505, 413)
+position = Vector2(1481, 453)
 
 [node name="Bounds" type="StaticBody2D" parent="."]
 collision_layer = 3
@@ -106,5 +107,11 @@ position = Vector2(783.375, 456)
 scale = Vector2(4.75012, 748)
 mesh = SubResource("BoxMesh_3bjme")
 texture = SubResource("CanvasTexture_4kb1y")
+
+[node name="PlainStarfield1" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(783, 481)
+scale = Vector2(0.214356, 0.212891)
+texture = ExtResource("7_yrpop")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -28,10 +28,12 @@ texture = ExtResource("2_jvsk3")
 shape = SubResource("CircleShape2D_jgrb8")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-modulate = Color(1, 1, 1, 0.898039)
+modulate = Color(0.723681, 1, 0.665417, 0.572549)
 amount = 1000
 lifetime = 0.4
 texture = ExtResource("3_nia38")
+emission_shape = 1
+emission_sphere_radius = 5.87
 gravity = Vector2(0, 0)
 scale_amount_min = 0.03
 scale_amount_max = 0.03

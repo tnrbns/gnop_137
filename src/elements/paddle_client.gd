@@ -26,7 +26,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("shoot"):
 			ball.is_active = true
 			# Set initial velocity when shooting
-			ball.vel = Vector2(ball.speed * -1, ball.speed)
+			ball.vel = Vector2(ball.speed * -1, 0)
 			# Detach the ball from the paddle
 			remove_child(ball)
 			get_parent().add_child(ball)

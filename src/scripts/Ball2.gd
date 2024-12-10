@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
-var speed = 750
+var speed = 800
 var vel = Vector2.ZERO
 var direction = Vector2.ZERO
 var is_active = false  # Default to inactive
 var bounds = Rect2(Vector2.ZERO, Vector2(1560, 864))  # Define bounds to the play area
+@export var maxHealth = 3
+@onready var currBall : int = maxHealth
 
 func _ready():
 	# Initialize bounds based on the viewport size
@@ -21,7 +23,11 @@ func _physics_process(delta: float) -> void:
 		
 		# Check if the ball is out of bounds
 		if !bounds.has_point(global_position):
+			currBall -= 1
+			print(currBall)
 			reset_to_paddle()
+			if currBall < 0:
+				get_tree().change_scene_to_file("res://scenes/endgame.tscn")
 
 func reset_to_paddle():
 	# Reset the ball to the paddle's position

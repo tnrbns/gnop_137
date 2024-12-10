@@ -25,10 +25,11 @@ shape = SubResource("RectangleShape2D_rmgcc")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 emitting = false
-amount = 500
+amount = 1500
 lifetime = 0.5
 one_shot = true
 preprocess = 0.5
+explosiveness = 0.5
 randomness = 1.0
 draw_order = 1
 emission_shape = 1
@@ -38,4 +39,4 @@ linear_accel_min = 0.1
 linear_accel_max = 0.1
 scale_amount_min = 0.0
 scale_amount_max = 2.0
-color = Color(0.831373, 0.909804, 0.560784, 0.756863)
+color = Color(0.954405, 0.493767, 0.719291, 0.756863)

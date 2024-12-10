@@ -13,23 +13,23 @@ func _ready():
 	var column_gap = 70      # Horizontal gap between columns
 	var row_gap = 70         # Vertical gap between rows
 	
-	# Create blocks on the right side
-	for col in range(5): 
-		for row in range(11): 
-			var x_position = start_x_right + col * column_gap
-			var y_position = start_y + row * row_gap
-			var instance = block.instantiate()
-			add_child(instance)
-			instance.position = Vector2(x_position, y_position)
-	
-	# Create mirrored blocks on the left side
-	for col in range(5): 
-		for row in range(11): 
-			var x_position = start_x_left + (7 - col) * column_gap
-			var y_position = start_y + row * row_gap
-			var instance = block_client.instantiate()
-			add_child(instance)
-			instance.position = Vector2(x_position, y_position)
+	## Create blocks on the right side
+	#for col in range(6): 
+		#for row in range(11): 
+			#var x_position = start_x_right + col * column_gap
+			#var y_position = start_y + row * row_gap
+			#var instance = block.instantiate()
+			#add_child(instance)
+			#instance.position = Vector2(x_position, y_position)
+	#
+	## Create mirrored blocks on the left side
+	#for col in range(6): 
+		#for row in range(11): 
+			#var x_position = start_x_left + (7 - col) * column_gap
+			#var y_position = start_y + row * row_gap
+			#var instance = block_client.instantiate()
+			#add_child(instance)
+			#instance.position = Vector2(x_position, y_position)
 	
 	timelabel = $TimeLabel
 	timer = $Timer
