@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://c6mm6uufbtgt"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_oqrlk"]
-[ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://assets/fonts/JejuHallasan-Regular.ttf" id="2_5ml6j"]
-[ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://assets/fonts/Gaegu-Bold.ttf" id="3_24mlg"]
+[ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://fonts/JejuHallasan-Regular.ttf" id="2_5ml6j"]
+[ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://fonts/Gaegu-Bold.ttf" id="3_24mlg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ym45u"]
 bg_color = Color(0, 0, 0, 1)
@@ -147,4 +147,5 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_sqnyb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kw67n")
 text = "Quit"
 
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
