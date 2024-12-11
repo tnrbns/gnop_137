@@ -15,6 +15,7 @@ func _physics_process(delta: float) -> void:
 		# Move the ball and handle collisions
 		var collision = move_and_collide(vel * delta)
 		if collision:
+			$Collide.play()
 			vel = vel.bounce(collision.get_normal())
 			if collision.get_collider().has_method("hit"):
 				collision.get_collider().hit()
