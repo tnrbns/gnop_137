@@ -10,3 +10,8 @@ func addPointsP1(points):
 	
 func addPointsP2(points):
 	score_p2 += points
+
+
+var Players = {
+	
+}

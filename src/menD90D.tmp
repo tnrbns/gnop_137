@@ -180,27 +180,6 @@ alignment = 1
 clear_button_enabled = true
 caret_blink = true
 
-[node name="LineEdit" type="LineEdit" parent="."]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 0
-offset_left = 460.0
-offset_top = 559.0
-offset_right = 876.0
-offset_bottom = 609.0
-size_flags_vertical = 4
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_colors/font_placeholder_color = Color(0.552956, 0.552956, 0.552956, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_24m7x")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/focus = SubResource("StyleBoxFlat_86ga8")
-theme_override_styles/read_only = SubResource("StyleBoxFlat_0rxs2")
-theme_override_styles/normal = SubResource("StyleBoxFlat_otf1w")
-placeholder_text = "Player Name"
-alignment = 1
-clear_button_enabled = true
-caret_blink = true
-
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 2
 offset_left = 560.0
@@ -220,10 +199,10 @@ text = "Start Game"
 
 [node name="JoinButton" type="Button" parent="."]
 layout_mode = 2
-offset_left = 876.0
-offset_top = 513.0
-offset_right = 1108.0
-offset_bottom = 554.0
+offset_left = 877.0
+offset_top = 511.0
+offset_right = 1109.0
+offset_bottom = 552.0
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -237,10 +216,10 @@ text = "Join Game"
 
 [node name="HostButton" type="Button" parent="."]
 layout_mode = 2
-offset_left = 892.0
-offset_top = 560.0
-offset_right = 1116.0
-offset_bottom = 601.0
+offset_left = 666.0
+offset_top = 562.0
+offset_right = 890.0
+offset_bottom = 603.0
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -300,7 +279,10 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_kw67n")
 text = "Quit"
 
 [connection signal="mouse_entered" from="StartButton" to="." method="_on_join_button_mouse_entered"]
+[connection signal="pressed" from="StartButton" to="." method="_on_join_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="mouse_entered" from="JoinButton" to="." method="_on_join_button_mouse_entered"]
+[connection signal="pressed" from="JoinButton" to="." method="_on_join_button_pressed"]
 [connection signal="mouse_entered" from="HostButton" to="." method="_on_host_button_mouse_entered"]
 [connection signal="mouse_entered" from="VBoxContainer/HelpButton" to="." method="_on_help_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/HelpButton" to="." method="_on_help_button_pressed"]
