@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://casxsw0dc2jox"]
+[gd_scene load_steps=6 format=3 uid="uid://casxsw0dc2jox"]
 
 [ext_resource type="Script" path="res://scripts/paddle.gd" id="1_txqwe"]
 [ext_resource type="Texture2D" uid="uid://b35kv3tw7qyr0" path="res://assets/paddle_wht.png" id="2_pgcdm"]
@@ -6,6 +6,11 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7ey8"]
 size = Vector2(40, 214)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_l1hpu"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="Paddle" type="CharacterBody2D"]
 collision_layer = 3
@@ -23,3 +28,6 @@ shape = SubResource("RectangleShape2D_n7ey8")
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_tr7ee")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_l1hpu")
