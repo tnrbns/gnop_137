@@ -1,0 +1,162 @@
+[gd_scene load_steps=11 format=3 uid="uid://co6esh7ywgpd6"]
+
+[ext_resource type="Texture2D" uid="uid://l1xwlhu32jwb" path="res://assets/home-button.png" id="1_aqq72"]
+[ext_resource type="Script" path="res://Help/helpmenu.gd" id="1_p2enu"]
+[ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://assets/fonts/JejuHallasan-Regular.ttf" id="2_0ppgf"]
+[ext_resource type="Texture2D" uid="uid://c75nppi81x5n3" path="res://assets/w_key.jpg" id="2_ytst74"]
+[ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://assets/fonts/Gaegu-Bold.ttf" id="3_rxdx5"]
+[ext_resource type="FontFile" uid="uid://rd3thyicdh3x" path="res://assets/fonts/Gaegu-Regular.ttf" id="4_hv228"]
+[ext_resource type="Texture2D" uid="uid://bvrusnnbxxtss" path="res://assets/s_key.jpg" id="7_0d01i"]
+[ext_resource type="Texture2D" uid="uid://d1pqci8qw5als" path="res://assets/click-removebg-preview.png" id="8_jot54"]
+[ext_resource type="Texture2D" uid="uid://cf5y3a6jon304" path="res://assets/up_arrow.jpg" id="9_lwtfq"]
+[ext_resource type="Texture2D" uid="uid://d1ekf251epa" path="res://assets/arrow-down.svg" id="10_gy338"]
+
+[node name="Help" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p2enu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_aqq72")
+
+[node name="BackButton" type="TextureButton" parent="ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_aqq72")
+texture_pressed = ExtResource("1_aqq72")
+
+[node name="Welcome" type="Label" parent="."]
+layout_mode = 2
+offset_left = 686.0
+offset_top = 163.0
+offset_right = 901.0
+offset_bottom = 209.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rxdx5")
+theme_override_font_sizes/font_size = 45
+text = "Welcome to"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 466.0
+offset_top = 187.0
+offset_right = 1110.0
+offset_bottom = 439.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0ppgf")
+theme_override_font_sizes/font_size = 250
+text = "GNOP"
+
+[node name="Phrase" type="Label" parent="."]
+layout_mode = 2
+offset_left = 516.0
+offset_top = 402.0
+offset_right = 1076.0
+offset_bottom = 433.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 30
+text = "Challenge a friend and let the battle begin!"
+horizontal_alignment = 1
+
+[node name="Phrase5" type="Label" parent="."]
+layout_mode = 2
+offset_left = 336.0
+offset_top = 444.0
+offset_right = 1246.0
+offset_bottom = 543.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 30
+text = "Claim as many of your opponent's tiles as you can 
+(while maintaining defending your own area) before the clock runs out.
+Are you up for the challenge? Game on!"
+horizontal_alignment = 1
+
+[node name="WKey" type="Sprite2D" parent="."]
+position = Vector2(571, 620)
+scale = Vector2(0.181783, 0.171319)
+texture = ExtResource("2_ytst74")
+
+[node name="SKey" type="Sprite2D" parent="."]
+position = Vector2(788, 625)
+scale = Vector2(0.173524, 0.172837)
+texture = ExtResource("7_0d01i")
+
+[node name="Click-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(996.349, 634.228)
+scale = Vector2(0.59097, 0.656751)
+texture = ExtResource("8_jot54")
+
+[node name="Phrase2" type="Label" parent="."]
+layout_mode = 2
+offset_left = 922.349
+offset_top = 687.228
+offset_right = 1001.35
+offset_bottom = 718.228
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 30
+text = "Shoot!"
+horizontal_alignment = 1
+
+[node name="Phrase3" type="Label" parent="."]
+layout_mode = 2
+offset_left = 752.349
+offset_top = 681.228
+offset_right = 873.349
+offset_bottom = 712.228
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 30
+text = "Go Down!"
+horizontal_alignment = 1
+
+[node name="Phrase4" type="Label" parent="."]
+layout_mode = 2
+offset_left = 544.349
+offset_top = 686.228
+offset_right = 665.349
+offset_bottom = 717.228
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 30
+text = "Go Up!"
+horizontal_alignment = 1
+
+[node name="UpArrow" type="Sprite2D" parent="."]
+position = Vector2(521.349, 702.228)
+scale = Vector2(0.110737, 0.105682)
+texture = ExtResource("9_lwtfq")
+
+[node name="Arrow-down" type="Sprite2D" parent="."]
+position = Vector2(730.349, 702.228)
+scale = Vector2(0.0674388, 0.056293)
+texture = ExtResource("10_gy338")
+
+[connection signal="pressed" from="ColorRect/TextureRect/BackButton" to="." method="_on_back_button_pressed"]

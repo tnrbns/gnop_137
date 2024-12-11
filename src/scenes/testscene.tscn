@@ -70,28 +70,66 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ScoreP1" type="Label" parent="."]
-offset_left = 363.0
-offset_top = -4.0
-offset_right = 666.0
-offset_bottom = 71.0
+offset_left = 259.0
+offset_top = -5.0
+offset_right = 562.0
+offset_bottom = 70.0
 theme_override_fonts/font = ExtResource("3_r6djg")
 theme_override_font_sizes/font_size = 40
 text = "0"
 vertical_alignment = 1
 
+[node name="NameP1" type="Label" parent="."]
+z_index = 1
+offset_left = 10.0
+offset_top = -8.0
+offset_right = 229.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_r6djg")
+theme_override_font_sizes/font_size = 40
+text = "Player001"
+vertical_alignment = 1
+
 [node name="ScoreP2" type="Label" parent="."]
-offset_left = 1145.0
+offset_left = 1023.0
 offset_top = -4.0
-offset_right = 1448.0
+offset_right = 1326.0
 offset_bottom = 71.0
 theme_override_fonts/font = ExtResource("3_r6djg")
 theme_override_font_sizes/font_size = 40
 text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="NameP2" type="Label" parent="."]
+z_index = 1
+offset_left = 1334.0
+offset_top = -8.0
+offset_right = 1553.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_r6djg")
+theme_override_font_sizes/font_size = 40
+text = "Player002"
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 position = Vector2(768.25, 62)
 scale = Vector2(1636.5, 8)
+mesh = SubResource("BoxMesh_3bjme")
+texture = SubResource("CanvasTexture_4kb1y")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="."]
+position = Vector2(120, 10)
+scale = Vector2(258, 104)
+mesh = SubResource("BoxMesh_3bjme")
+texture = SubResource("CanvasTexture_4kb1y")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="."]
+position = Vector2(1454, 6)
+scale = Vector2(238, 104)
 mesh = SubResource("BoxMesh_3bjme")
 texture = SubResource("CanvasTexture_4kb1y")
 
@@ -110,8 +148,8 @@ texture = SubResource("CanvasTexture_4kb1y")
 
 [node name="PlainStarfield1" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(783, 481)
-scale = Vector2(0.214356, 0.212891)
+position = Vector2(783, 456)
+scale = Vector2(0.214356, 0.225098)
 texture = ExtResource("7_yrpop")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
