@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ow1s85bcxtui"]
+[gd_scene load_steps=6 format=3 uid="uid://ow1s85bcxtui"]
 
 [ext_resource type="Script" path="res://scripts/block_2.gd" id="1_20vbw"]
 [ext_resource type="Texture2D" uid="uid://bmr6kndjkbcuj" path="res://assets/sheet_black.png" id="2_wx60o"]
 [ext_resource type="Script" path="res://scripts/sprite_2d.gd" id="3_iqtt1"]
+[ext_resource type="AudioStream" uid="uid://drjdghtpscwxp" path="res://assets/sfx/SE-Collision_04A.ogg" id="4_avm43"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmgcc"]
 size = Vector2(69.5, 71.5)
@@ -39,3 +40,7 @@ linear_accel_max = 0.1
 scale_amount_min = 0.0
 scale_amount_max = 2.0
 color = Color(0.954405, 0.493767, 0.719291, 0.756863)
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_avm43")
+volume_db = 10.0

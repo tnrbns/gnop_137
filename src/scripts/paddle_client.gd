@@ -24,6 +24,7 @@ func _physics_process(delta):
 		
 		# When left mouse button is pressed, activate the ball
 		if Input.is_action_just_pressed("shoot"):
+			$Shoot.play()
 			ball.is_active = true
 			# Set initial velocity when shooting
 			ball.vel = Vector2(ball.speed * -1, 0)
