@@ -187,4 +187,29 @@ position = Vector2(369, 555)
 scale = Vector2(0.0674388, 0.056293)
 texture = ExtResource("10_gy338")
 
+[node name="VBoxContainer6" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -985.0
+offset_top = 89.0
+offset_right = 15.0
+offset_bottom = 169.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Phrase2" type="Label" parent="VBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_hv228")
+theme_override_font_sizes/font_size = 30
+text = "Controls"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="ColorRect/TextureRect/BackButton" to="." method="_on_back_button_pressed"]
