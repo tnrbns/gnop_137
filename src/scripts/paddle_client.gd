@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 450.0
+const SPEED = 600.0
 @onready var ball_scene = preload("res://elements/ball2_client.tscn")
 var ball = null
 
@@ -24,9 +24,10 @@ func _physics_process(delta):
 		
 		# When left mouse button is pressed, activate the ball
 		if Input.is_action_just_pressed("shoot"):
+			$Shoot.play()
 			ball.is_active = true
 			# Set initial velocity when shooting
-			ball.vel = Vector2(ball.speed * -1, 0)
+			ball.vel = Vector2(ball.speed * -1, ball.speed*randi_range(-1,1))
 			# Detach the ball from the paddle
 			remove_child(ball)
 			get_parent().add_child(ball)

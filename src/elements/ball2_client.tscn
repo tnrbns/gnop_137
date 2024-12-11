@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjd5g0mfnoiim"]
+[gd_scene load_steps=8 format=3 uid="uid://bjd5g0mfnoiim"]
 
-[ext_resource type="Script" path="res://scripts/Ball2.gd" id="1_bwm3y"]
+[ext_resource type="Script" path="res://scripts/ball_2_client.gd" id="1_kro3y"]
 [ext_resource type="Texture2D" uid="uid://c1b2mn5l55nwf" path="res://assets/joker_black.png" id="2_jvsk3"]
 [ext_resource type="Texture2D" uid="uid://dc70la0b8ghjr" path="res://assets/joker_icon_wht.png" id="3_nia38"]
+[ext_resource type="AudioStream" uid="uid://drjdghtpscwxp" path="res://assets/sfx/SE-Collision_04A.ogg" id="4_xdr7v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jgrb8"]
 radius = 19.2354
@@ -17,7 +18,7 @@ colors = PackedColorArray(0.830335, 0.830335, 0.830335, 1, 1, 1, 1, 1)
 [node name="Ball2" type="CharacterBody2D"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_bwm3y")
+script = ExtResource("1_kro3y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
@@ -39,3 +40,7 @@ scale_amount_min = 0.03
 scale_amount_max = 0.03
 scale_amount_curve = SubResource("Curve_i31vr")
 color_ramp = SubResource("Gradient_i62h1")
+
+[node name="Collide" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_xdr7v")
+volume_db = -10.0

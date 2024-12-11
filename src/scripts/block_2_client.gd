@@ -3,7 +3,7 @@ extends RigidBody2D
 func hit():
 	# Access the Sprite2D node
 	var sprite = $Sprite2D
-	
+	$Hit.play()
 	$CPUParticles2D.emitting = true
 	# Check the current texture position
 	if sprite.region_rect.position.x == 2730:  # 

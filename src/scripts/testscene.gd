@@ -7,6 +7,9 @@ var timelabel: Label
 var timer: Timer
 
 func _ready():
+	$NameP1.text = str(GameManager.name_p1)
+	$NameP2.text = str(GameManager.name_p2)
+	
 	var start_x_right = 900  # X position for the right side blocks
 	var start_x_left = 180   # X position for the left side blocks
 	var start_y = 110

@@ -7,7 +7,7 @@ func _on_join_button_pressed() -> void:
 
 func _on_host_button_pressed() -> void:
 	$VBoxContainer/Click.play()
-	get_tree().change_scene_to_file("res://Host/host_play.tscn")
+	get_tree().change_scene_to_file("res://Host/hostgame.tscn")
 
 func _on_help_button_pressed() -> void:
 	$VBoxContainer/Click.play()

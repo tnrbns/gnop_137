@@ -24,11 +24,10 @@ func _physics_process(delta: float) -> void:
 		if !bounds.has_point(global_position):
 			# Check if the ball reaches the rightmost or leftmost bounds
 			if global_position.x >= bounds.position.x + bounds.size.x:  # Rightmost bound
-				GameManager.addPointsP1(20)  
+				GameManager.addPointsP2(-10)  
 			elif global_position.x <= bounds.position.x:  # Leftmost bound
-				GameManager.addPointsP1(-10)  
+				GameManager.addPointsP2(20)  
 			reset_to_paddle()
-			
 
 func reset_to_paddle():
 	# Reset the ball to the paddle's position
