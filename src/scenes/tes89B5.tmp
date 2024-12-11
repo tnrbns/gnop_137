@@ -1,0 +1,91 @@
+[gd_scene load_steps=11 format=3 uid="uid://bha2tag8jkx1q"]
+
+[ext_resource type="Script" path="res://scripts/testscene.gd" id="1_20r7q"]
+[ext_resource type="PackedScene" uid="uid://casxsw0dc2jox" path="res://elements/paddle.tscn" id="2_1ax3e"]
+[ext_resource type="Script" path="res://scripts/timer.gd" id="2_dmxbk"]
+[ext_resource type="FontFile" uid="uid://rd3thyicdh3x" path="res://assets/fonts/Gaegu-Regular.ttf" id="3_pfqtj"]
+[ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://assets/fonts/Gaegu-Bold.ttf" id="3_r6djg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhkk3"]
+size = Vector2(1586, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vc8st"]
+size = Vector2(1567, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_luklr"]
+size = Vector2(102, 963)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3bjme"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4kb1y"]
+
+[node name="test level" type="Node2D"]
+script = ExtResource("1_20r7q")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 120.0
+script = ExtResource("2_dmxbk")
+
+[node name="TimeLabel" type="Label" parent="."]
+offset_left = 739.0
+offset_top = 4.0
+offset_right = 838.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("3_pfqtj")
+theme_override_font_sizes/font_size = 50
+text = "2:30"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Paddle" parent="." instance=ExtResource("2_1ax3e")]
+position = Vector2(94, 434)
+scale = Vector2(1, 0.99018)
+
+[node name="Bounds" type="StaticBody2D" parent="."]
+
+[node name="Top" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(787, -8)
+shape = SubResource("RectangleShape2D_uhkk3")
+
+[node name="Bottom" type="CollisionShape2D" parent="Bounds"]
+position = Vector2(779, 899)
+shape = SubResource("RectangleShape2D_vc8st")
+
+[node name="Deathzone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone"]
+position = Vector2(-45, 463)
+shape = SubResource("RectangleShape2D_luklr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Deathzone"]
+position = Vector2(1607, 476)
+shape = SubResource("RectangleShape2D_luklr")
+
+[node name="ScoreP1" type="Label" parent="."]
+offset_left = 363.0
+offset_top = -4.0
+offset_right = 666.0
+offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("3_r6djg")
+theme_override_font_sizes/font_size = 40
+text = "0"
+vertical_alignment = 1
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(768.25, 62)
+scale = Vector2(1636.5, 8)
+mesh = SubResource("BoxMesh_3bjme")
+texture = SubResource("CanvasTexture_4kb1y")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+position = Vector2(750, 851)
+scale = Vector2(1668, 8)
+mesh = SubResource("BoxMesh_3bjme")
+texture = SubResource("CanvasTexture_4kb1y")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="."]
+modulate = Color(0.6, 0.6, 0.6, 1)
+position = Vector2(783.375, 456)
+scale = Vector2(4.75012, 748)
+mesh = SubResource("BoxMesh_3bjme")
+texture = SubResource("CanvasTexture_4kb1y")

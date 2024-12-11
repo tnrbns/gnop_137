@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3py55j277d47"]
+
+[ext_resource type="Script" path="res://scripts/paddle_client.gd" id="1_0rp5l"]
+[ext_resource type="Texture2D" uid="uid://b7extpxk05beu" path="res://assets/paddle_blk.png" id="2_c560r"]
+[ext_resource type="AudioStream" uid="uid://bdhgp2x67tt8n" path="res://assets/sfx/SE-Collision_02.ogg" id="3_d4mul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7ey8"]
+size = Vector2(40, 214)
+
+[node name="Paddle" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_0rp5l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(0.35, 0.3)
+texture = ExtResource("2_c560r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_n7ey8")
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_d4mul")

@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://s7pytxxadno5"]
+
+[ext_resource type="Script" path="res://scripts/endgame.gd" id="1_ed2p1"]
+[ext_resource type="FontFile" uid="uid://rr601o7uoeh3" path="res://assets/fonts/Gaegu-Bold.ttf" id="1_hpi7l"]
+[ext_resource type="FontFile" uid="uid://dtu8d7rvuunps" path="res://assets/fonts/JejuHallasan-Regular.ttf" id="2_woa70"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4d5s"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.423651, 0.423651, 0.423651, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvses"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Endgame" type="Node2D"]
+position = Vector2(2, 0)
+script = ExtResource("1_ed2p1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1560.0
+offset_bottom = 864.0
+
+[node name="PlayerName" type="Label" parent="."]
+offset_left = 257.0
+offset_top = 147.0
+offset_right = 1300.0
+offset_bottom = 490.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hpi7l")
+theme_override_font_sizes/font_size = 251
+text = "Player01"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 509.0
+offset_top = 328.0
+offset_right = 1099.0
+offset_bottom = 671.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_hpi7l")
+theme_override_font_sizes/font_size = 251
+text = "wins!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 586.0
+offset_top = 669.0
+offset_right = 958.0
+offset_bottom = 740.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+size_flags_stretch_ratio = 20.0
+theme_override_fonts/font = ExtResource("2_woa70")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_o4d5s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pvses")
+text = "BACK TO MENU"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
