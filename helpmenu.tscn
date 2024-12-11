@@ -137,21 +137,6 @@ text = "Claim as many of your opponent's tiles as you can before the clock runs 
 Are you up for the challenge? Game on!"
 horizontal_alignment = 1
 
-[node name="WKey" type="Sprite2D" parent="."]
-position = Vector2(278, 454)
-scale = Vector2(0.181783, 0.171319)
-texture = ExtResource("2_ytst74")
-
-[node name="SKey" type="Sprite2D" parent="."]
-position = Vector2(279, 552)
-scale = Vector2(0.173524, 0.172837)
-texture = ExtResource("7_0d01i")
-
-[node name="Click-removebg-preview" type="Sprite2D" parent="."]
-position = Vector2(950, 508)
-scale = Vector2(1, 1.11131)
-texture = ExtResource("8_jot54")
-
 [node name="VBoxContainer5" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -159,10 +144,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -414.0
-offset_top = 123.0
-offset_right = 586.0
-offset_bottom = 203.0
+offset_left = -419.0
+offset_top = 125.0
+offset_right = 581.0
+offset_bottom = 205.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 100
@@ -177,16 +162,6 @@ theme_override_font_sizes/font_size = 30
 text = "Adjust ball force and angle"
 horizontal_alignment = 1
 
-[node name="UpArrow" type="Sprite2D" parent="."]
-position = Vector2(185, 452)
-scale = Vector2(0.110737, 0.105682)
-texture = ExtResource("9_lwtfq")
-
-[node name="Arrow-down" type="Sprite2D" parent="."]
-position = Vector2(369, 555)
-scale = Vector2(0.0674388, 0.056293)
-texture = ExtResource("10_gy338")
-
 [node name="VBoxContainer6" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -194,10 +169,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -988.0
-offset_top = 85.0
-offset_right = 12.0
-offset_bottom = 165.0
+offset_left = -960.0
+offset_top = 91.0
+offset_right = 40.0
+offset_bottom = 171.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 100
@@ -211,5 +186,46 @@ theme_override_fonts/font = ExtResource("2_0ppgf")
 theme_override_font_sizes/font_size = 30
 text = "Controls"
 horizontal_alignment = 1
+
+[node name="VBoxContainer7" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -476.0
+offset_top = -3.0
+offset_right = 524.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="WKey" type="Sprite2D" parent="VBoxContainer7"]
+position = Vector2(205, 133)
+scale = Vector2(0.181783, 0.171319)
+texture = ExtResource("2_ytst74")
+
+[node name="SKey" type="Sprite2D" parent="VBoxContainer7"]
+position = Vector2(206, 231)
+scale = Vector2(0.173524, 0.172837)
+texture = ExtResource("7_0d01i")
+
+[node name="UpArrow" type="Sprite2D" parent="VBoxContainer7"]
+position = Vector2(112, 131)
+scale = Vector2(0.110737, 0.105682)
+texture = ExtResource("9_lwtfq")
+
+[node name="Arrow-down" type="Sprite2D" parent="VBoxContainer7"]
+position = Vector2(296, 234)
+scale = Vector2(0.0674388, 0.056293)
+texture = ExtResource("10_gy338")
+
+[node name="Click-removebg-preview" type="Sprite2D" parent="VBoxContainer7"]
+position = Vector2(837, 184)
+scale = Vector2(1, 1.11131)
+texture = ExtResource("8_jot54")
 
 [connection signal="pressed" from="ColorRect/TextureRect/BackButton" to="." method="_on_back_button_pressed"]
