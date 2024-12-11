@@ -1,8 +1,5 @@
 extends Control
 
-@export var Address = "127.0.0.1"
-@export var port = 8910
-
 # Use `@onready` without the @ symbol
 @onready var join_button = $JoinButton
 @onready var enter_ip_address = $VBoxContainer/EnterIPAddress
@@ -29,7 +26,7 @@ func _on_back_button_pressed():
 func _on_join_button_pressed():
 	print("Start Gameplay")
 	var peer = ENetMultiplayerPeer.new()
-	var error = peer.create_client(Address, port)
+	var error = peer.create_client(Global.Address, Global.port)
 	
 	if error != OK:
 		print("Connection failed with error: " + str(error))

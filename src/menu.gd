@@ -1,6 +1,6 @@
 extends Control
 
-@export var Address = "127.0.0.1"
+@export var Address = "192.168.77.44"
 @export var port = 8910
 @onready var test_scene = load("res://scenes/testscene.tscn")
 
