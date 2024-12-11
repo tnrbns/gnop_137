@@ -139,6 +139,19 @@ stream = ExtResource("4_6anyq")
 [node name="Click" type="AudioStreamPlayer" parent="VBoxContainer"]
 stream = ExtResource("4_6xcla")
 
+[node name="StartGame" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5ml6j")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3p8cx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6m4ir")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ec8vq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sbulu")
+text = "Start Game"
+
 [node name="JoinButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -191,6 +204,8 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ec8vq")
 theme_override_styles/normal = SubResource("StyleBoxFlat_kw67n")
 text = "Quit"
 
+[connection signal="mouse_entered" from="VBoxContainer/StartGame" to="." method="_on_join_button_mouse_entered"]
+[connection signal="pressed" from="VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/JoinButton" to="." method="_on_join_button_mouse_entered"]
 [connection signal="pressed" from="VBoxContainer/JoinButton" to="." method="_on_join_button_pressed"]
 [connection signal="mouse_entered" from="VBoxContainer/HostButton" to="." method="_on_host_button_mouse_entered"]

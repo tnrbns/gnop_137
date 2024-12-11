@@ -1,5 +1,7 @@
 extends Node2D
 
+var Players = {}
+
 var score_p1 = 0
 var score_p2 = 0
 

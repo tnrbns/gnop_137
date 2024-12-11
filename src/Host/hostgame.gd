@@ -36,6 +36,8 @@ func _on_host_button_pressed():
 	multiplayer.set_multiplayer_peer(peer)
 	
 	print("Waiting for Players!")
+	#GameManager.SendPlayerInformation.rpc("", enter_host_name.text, multiplayer.get_unique_id())
+	#print("Server started! Host name sent as player information: ", enter_host_name.text)
 	get_tree().change_scene_to_file("res://menu.tscn")
 	
 	# Add your gameplay logic here
