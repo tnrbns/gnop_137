@@ -8,8 +8,8 @@ extends Control
 
 const MAX_PLAYER = 2
 
-@export var address = "127.0.0.1"
-@export var port = 8080
+@export var address = "172.16.5.123"
+@export var port = 8910
 
 var peer
 

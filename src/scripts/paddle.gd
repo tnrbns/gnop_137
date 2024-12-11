@@ -3,6 +3,8 @@ extends CharacterBody2D
 const SPEED = 600.0
 @onready var ball_scene = preload("res://elements/ball2.tscn")
 var ball = null
+@export var b_position = global_position
+
 
 func _ready():
 	# Create and attach the ball when the paddle is initialized

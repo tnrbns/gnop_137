@@ -3,7 +3,7 @@ extends CharacterBody2D
 var speed = 800
 var vel = Vector2.ZERO
 var direction = Vector2.ZERO
-var is_active = false  # Default to inactive
+@export var is_active = false  # Default to inactive
 var bounds = Rect2(Vector2.ZERO, Vector2(1560, 864))  # Define bounds to the play area
 
 func _ready():

@@ -1,6 +1,6 @@
 extends Control
 
-@export var Address = "127.0.0.1"
+@export var Address = "172.16.5.123"
 @export var port = 8910
 # Use `@onready` without the @ symbol
 @onready var host_button = $VBoxContainer4/HostButton
